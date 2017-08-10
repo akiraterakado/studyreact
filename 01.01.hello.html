@@ -17,8 +17,16 @@
 <script>
     // first DOM code
     ReactDOM.render(
-        React.DOM.h1(null, "Hello H1"), // create react world,
-        document.getElementById("app")  // it appends as DOM into $("#app") as children.
+        React.DOM.h1(
+            {
+                id: "helloId",
+                className: "helloClass",
+                sound: "good",              // this causes warning. Unknown "prop": what is this?
+            },
+            "Hello",
+            React.DOM.span(null, " tree world!")
+        ), // create react world,
+        document.getElementById("app")      // it appends as DOM into $("#app") as children.
     );
 </script>
 
