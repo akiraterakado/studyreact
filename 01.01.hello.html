@@ -16,15 +16,36 @@
 <!-- /閉じタグの省略はだめ。書くこと -->
 
 <script type="text/babel">
-    // first JSX code
+    // first my custom component
+
+    // 1. define component directly
+    var mycomp = React.createClass({
+        render: function () {
+            return (
+                    <h2>{this.props.name}'s component</h2>
+            )
+        }
+    });
+
+    // 2.render the component
     ReactDOM.render(
-        <h1 id="helloId2" className="superSentai" sounds="good">
-            Hello
-            <span>{" "}JSX world!</span>
-        </h1>,
-        document.getElementById("app")
+        React.createElement(mycomp, {
+            name: "THE-DOCTOR"
+        })
+        ,document.getElementById("app")
     );
-    {window.alert("Abarenger")}
+
+
+    // first JSX code
+//    ReactDOM.render(
+//        <h1 id="helloId2" className="superSentai" sounds="good">
+//            Hello
+//            <span>{" "}JSX world!</span>
+//        </h1>,
+//        document.getElementById("app")
+//    );
+//    {window.alert("Abarenger")}
+
 </script>
 
 </body>
