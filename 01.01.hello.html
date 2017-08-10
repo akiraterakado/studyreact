@@ -12,21 +12,17 @@
 <!-- 閉じタグの省略はだめ。書くこと -->
 <script src="react/build/react.js"></script>
 <script src="react/build/react-dom.js"></script>
+<script src="babel/browser.js"></script>
 <!-- /閉じタグの省略はだめ。書くこと -->
 
-<script>
-    // first DOM code
+<script type="text/babel">
+    // first JSX code
     ReactDOM.render(
-        React.DOM.h1(
-            {
-                id: "helloId",
-                className: "helloClass",
-                sound: "good",              // this causes warning. Unknown "prop": what is this?
-            },
-            "Hello",
-            React.DOM.span(null, " tree world!")
-        ), // create react world,
-        document.getElementById("app")      // it appends as DOM into $("#app") as children.
+        <h1 id="helloId2" className="superSentai" sounds="good">
+            Hello
+            <span>-JSX world!</span>
+        </h1>,
+        document.getElementById("app")
     );
 </script>
 
