@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Hello React 15.4!!!</title>
@@ -9,11 +9,17 @@
     <!-- application is drawn here -->
 </div>
 
-<script src="react/build/react.js"/>
-<script src="react/build/react-dom.js"/>
+<!-- 閉じタグの省略はだめ。書くこと -->
+<script src="react/build/react.js"></script>
+<script src="react/build/react-dom.js"></script>
+<!-- /閉じタグの省略はだめ。書くこと -->
+
 <script>
-    // application own code
-    // いまはreact codeが書かれていないので、真っ白である
+    // first DOM code
+    ReactDOM.render(
+        React.DOM.h1(null, "Hello H1"), // create react world,
+        document.getElementById("app")  // it appends as DOM into $("#app") as children.
+    );
 </script>
 
 </body>
