@@ -29,6 +29,7 @@
                 age: 45,
                 power: 800000,
                 called: 'フリーザ様',
+                automobile: '宇宙船',
             }
         },
         render: function () {
@@ -39,6 +40,7 @@
                         <li>age self announced: {this.props.age}</li>
                         <li>fighting power    : {this.props.power}</li>
                         <li>called            : {this.props.called}</li>
+                        <li>automobile        : {this.props.automobile}</li>
                     </ul>
                 </span>
             )
@@ -49,6 +51,8 @@
     ReactDOM.render(
         React.createElement(mycomp, {
             name: "THE-DOCTOR",
+            age: 10005,
+            automobile: 'TARDIS',
         })
         ,document.getElementById("app")
     );
